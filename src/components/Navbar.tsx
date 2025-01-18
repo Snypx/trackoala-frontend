@@ -23,6 +23,10 @@ const Navbar = () => {
     setMobileOpen(!mobileOpen)
   }
 
+  const handleLogin = () => {
+    window.location.href = 'https://app.trackoala.com'
+  }
+
   const navItems = [
     { text: 'Demos', link: '#' },
     { text: 'Blog', link: '#' },
@@ -69,20 +73,24 @@ const Navbar = () => {
             ))}
           </Box>
           <Box display="flex" gap={1}>
-            <Button variant="text" sx={{ color: 'black' }}>
+            <Button
+              variant="text"
+              sx={{ color: 'black' }}
+              onClick={handleLogin}
+            >
               Log In
             </Button>
-            <Button
+            {/* <Button
               variant="outlined"
               sx={{ color: 'black', borderRadius: '8px' }}
             >
               Book demo
-            </Button>
+            </Button> */}
             <Button
               variant="contained"
               sx={{ bgcolor: '#F9572F', borderRadius: '8px' }}
             >
-              Start now
+              Get Started
             </Button>
           </Box>
         </Toolbar>
@@ -189,7 +197,11 @@ const Navbar = () => {
               mt: 'auto',
             }}
           >
-            <Button variant="text" sx={{ color: 'black' }}>
+            <Button
+              variant="text"
+              sx={{ color: 'black' }}
+              onClick={handleLogin}
+            >
               Log In
             </Button>
             <Button variant="outlined" sx={{ color: 'black' }}>

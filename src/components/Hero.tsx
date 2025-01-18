@@ -1,5 +1,8 @@
 import { Box, Button, Container, Tab, Tabs, Typography } from '@mui/material'
 import { useState } from 'react'
+import inventory from '../assets/inven.jpg'
+import project from '../assets/project.jpg'
+import workflow from '../assets/workflow.jpg'
 
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0)
@@ -14,13 +17,13 @@ const HeroSection = () => {
   return (
     <Box
       sx={{
-        // height: '100dvh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         mt: 5,
       }}
     >
+      {/* Header content remains the same */}
       <Container maxWidth="md">
         <Box
           gap={2}
@@ -33,12 +36,12 @@ const HeroSection = () => {
           }}
         >
           <Typography variant="h2" gutterBottom>
-            The ultimate workflow solution
+            The Ultimate Workflow Solution
           </Typography>
-          <Box maxWidth="sm" m="auto">
+          <Box maxWidth="md" m="auto">
             <Typography variant="h6" gutterBottom>
-              Is your team struggling with missed deadlines? Let Trackoala help
-              you streamline your workflow and boost productivity.
+              Is your team struggling with missed deadlines? <br />
+              Streamline your workflow and boost productivity with our help.
             </Typography>
           </Box>
           <Box display="flex" justifyContent="center" gap={2}>
@@ -63,6 +66,8 @@ const HeroSection = () => {
           </Box>
         </Box>
       </Container>
+
+      {/* Fixed grey box container */}
       <Box
         sx={{
           bgcolor: '#f4f2f0',
@@ -70,6 +75,9 @@ const HeroSection = () => {
           margin: '40px auto',
           padding: '24px 0',
           borderRadius: '10px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 3,
         }}
       >
         <Tabs
@@ -79,7 +87,7 @@ const HeroSection = () => {
           centered
           textColor="inherit"
           TabIndicatorProps={{
-            sx: { display: 'none' }, // Hide the indicator line
+            sx: { display: 'none' },
           }}
           sx={{
             bgcolor: '#989796',
@@ -91,7 +99,7 @@ const HeroSection = () => {
           <Tab
             label="Inventory Management"
             sx={{
-              bgcolor: activeTab === 0 ? '#0F0F0F' : 'transparent', // Change background color when active
+              bgcolor: activeTab === 0 ? '#0F0F0F' : 'transparent',
               borderRadius: '15px',
               fontWeight: activeTab === 0 ? 'bold' : 'normal',
               color: '#FFFFFF',
@@ -100,7 +108,7 @@ const HeroSection = () => {
           <Tab
             label="Project Management"
             sx={{
-              bgcolor: activeTab === 1 ? '#2f2e2c' : 'transparent', // Change background color when active
+              bgcolor: activeTab === 1 ? '#2f2e2c' : 'transparent',
               borderRadius: '15px',
               fontWeight: activeTab === 1 ? 'bold' : 'normal',
               color: '#FFFFFF',
@@ -109,19 +117,23 @@ const HeroSection = () => {
           <Tab
             label="Workflow Automation"
             sx={{
-              bgcolor: activeTab === 2 ? '#2f2e2c' : 'transparent', // Change background color when active
+              bgcolor: activeTab === 2 ? '#2f2e2c' : 'transparent',
               borderRadius: '15px',
               fontWeight: activeTab === 2 ? 'bold' : 'normal',
               color: '#FFFFFF',
             }}
           />
         </Tabs>
+
+        {/* Fixed image container */}
         <Box
           sx={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            height: '30dvh',
+            width: '100%',
+            height: '400px', // Fixed height instead of dvh
+            overflow: 'hidden', // Contain oversized images
           }}
         >
           {activeTab === 0 && <InventoryManagementImage />}
@@ -129,6 +141,7 @@ const HeroSection = () => {
           {activeTab === 2 && <WorkflowAutomationImage />}
         </Box>
       </Box>
+
       <Box maxWidth="sm" m="auto" textAlign="center" sx={{ pb: 5 }}>
         <Typography variant="h4" gutterBottom>
           Trusted by thousands of agencies and consulting firms
@@ -138,16 +151,24 @@ const HeroSection = () => {
   )
 }
 
+// Updated image components with consistent sizing
+const imageStyle = {
+  width: '95%',
+  height: '100%',
+  objectFit: 'cover' as const,
+  borderRadius: '5px',
+}
+
 const InventoryManagementImage = () => {
-  return <img src="/api/placeholder/400/320" alt="Inventory Management" />
+  return <img src={inventory} alt="Inventory Management" style={imageStyle} />
 }
 
 const ProjectManagementImage = () => {
-  return <img src="/api/placeholder/400/320" alt="Project Management" />
+  return <img src={project} alt="Project Management" style={imageStyle} />
 }
 
 const WorkflowAutomationImage = () => {
-  return <img src="/api/placeholder/400/320" alt="Workflow Automation" />
+  return <img src={workflow} alt="Workflow Automation" style={imageStyle} />
 }
 
 export default HeroSection

@@ -9,7 +9,7 @@ const Footer = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
             <Typography variant="h6" gutterBottom>
-              YourSaaS
+              Trackoala
             </Typography>
             <Typography color="text.secondary" sx={{ mb: 4 }}>
               The all-in-one platform for managing your business with ease.
