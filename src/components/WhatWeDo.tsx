@@ -42,14 +42,14 @@ const items = [
 
 const WhatWeDo = () => {
   return (
-    <Box sx={{ py: 12, bgcolor: 'grey.50' }}>
+    <Box sx={{ py: 4, bgcolor: 'grey.50' }}>
       <Container maxWidth="lg">
         <Typography
-          variant="h2"
+          variant="h3"
           align="center"
           sx={{ mb: 2, fontWeight: 'bold' }}
         >
-          What We Do
+          Benefits of Our Services
         </Typography>
         <Typography
           variant="h6"
@@ -57,9 +57,7 @@ const WhatWeDo = () => {
           color="text.secondary"
           sx={{ mb: 8 }}
         >
-          Struggling with inventory tracking? Overwhelmed by project delays?
-          Trackoala simplifies it all with our comprehensive workflow management
-          solution.
+          See how Trackoala can transform your workflow and boost productivity
         </Typography>
         <Grid container spacing={4}>
           {items.map((item, index) => (

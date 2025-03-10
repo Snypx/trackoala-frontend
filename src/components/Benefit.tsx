@@ -47,23 +47,8 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <Box sx={{ py: 12 }}>
+    <Box>
       <Container maxWidth="lg">
-        <Typography
-          variant="h2"
-          align="center"
-          sx={{ mb: 2, fontWeight: 'bold' }}
-        >
-          Benefits of Our Services
-        </Typography>
-        <Typography
-          variant="h6"
-          align="center"
-          color="text.secondary"
-          sx={{ mb: 8 }}
-        >
-          See how Trackoala can transform your workflow and boost productivity.
-        </Typography>
         <Grid container spacing={4}>
           {benefits.map((benefit, index) => (
             <Grid item xs={12} md={4} key={index}>

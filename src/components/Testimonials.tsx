@@ -35,14 +35,36 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <Box sx={{ py: 12, bgcolor: '#F5F3F0' }}>
+    <Box
+      sx={{
+        py: 12,
+        bgcolor: '#F5F3F0',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+      }}
+    >
+      <Box
+        sx={{
+          borderRadius: 5,
+          bgcolor: '#008D8F',
+          p: '4px 16px',
+          marginBottom: '20px',
+        }}
+      >
+        <Typography variant="h6" sx={{ color: 'white' }}>
+          Testimonials
+        </Typography>
+      </Box>
       <Container maxWidth="lg">
         <Typography
           variant="h3"
           align="center"
           sx={{ mb: 8, fontWeight: 'bold' }}
         >
-          Loved by freelancers worldwide
+          Loved by businesses worldwide
         </Typography>
         <Grid container spacing={4}>
           {testimonials.map((testimonial, index) => (

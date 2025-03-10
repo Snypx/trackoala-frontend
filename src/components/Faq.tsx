@@ -46,7 +46,29 @@ const Faq = () => {
     }
 
   return (
-    <Box sx={{ py: 12, bgcolor: 'grey.50' }}>
+    <Box
+      sx={{
+        py: 12,
+        bgcolor: 'grey.50',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+      }}
+    >
+      <Box
+        sx={{
+          borderRadius: 5,
+          bgcolor: '#008D8F',
+          p: '4px 16px',
+          marginBottom: '20px',
+        }}
+      >
+        <Typography variant="h6" sx={{ color: 'white' }}>
+          FAQs
+        </Typography>
+      </Box>
       <Container maxWidth="md">
         <Typography
           variant="h3"

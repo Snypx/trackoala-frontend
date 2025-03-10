@@ -68,6 +68,11 @@ const Newsletter = () => {
               px: 4,
               bgcolor: '#F9572F',
               color: 'white',
+              '&:hover': {
+                backgroundColor: '#008D8F', // Change background color on hover
+                transform: 'scale(1.05)', // Slight scaling effect
+                transition: 'all 0.3s ease-in-out',
+              },
             }}
           >
             Subscribe

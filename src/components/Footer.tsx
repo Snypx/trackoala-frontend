@@ -1,6 +1,7 @@
 import { Container, Grid, Typography, Box, Divider } from '@mui/material'
 import FooterSection from './FooterSection'
 import { footerSections } from './footerData'
+import logo from '../assets/Trackola.svg'
 
 const Footer = () => {
   return (
@@ -8,6 +9,7 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
+            <img src={logo} alt="Trackoala Logo" style={{ height: 40 }} />
             <Typography variant="h6" gutterBottom>
               Trackoala
             </Typography>
@@ -26,7 +28,7 @@ const Footer = () => {
         <Divider sx={{ my: 4 }} />
 
         <Typography color="text.secondary" align="center">
-          © {new Date().getFullYear()} YourSaaS. All rights reserved.
+          © {new Date().getFullYear()} Trackoala. All rights reserved.
         </Typography>
       </Container>
     </Box>

@@ -24,7 +24,7 @@ const Navbar = () => {
   }
 
   const handleLogin = () => {
-    window.location.href = 'https://app.trackoala.com'
+    window.location.href = 'https://app.trackoala.com/login'
   }
 
   const navItems = [
@@ -88,7 +88,15 @@ const Navbar = () => {
             </Button> */}
             <Button
               variant="contained"
-              sx={{ bgcolor: '#F9572F', borderRadius: '8px' }}
+              sx={{
+                bgcolor: '#F9572F',
+                borderRadius: '8px',
+                '&:hover': {
+                  backgroundColor: '#008D8F', // Change background color on hover
+                  transform: 'scale(1.05)', // Slight scaling effect
+                  transition: 'all 0.3s ease-in-out',
+                },
+              }}
             >
               Get Started
             </Button>
